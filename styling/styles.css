@@ -1,0 +1,52 @@
+body {
+    background-color: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #61dafb;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="submit"], select {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background-color: #2d2d2d;
+    color: #d4d4d4;
+    width: 100px;
+}
+
+input[type="submit"] {
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    flex: display;
+    min-width: 300px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background-color: #2d2d2d;
+}
+
+.section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.star_section form input, .const_section form select {
+    margin-bottom: 10px;
+}
+
