@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Astronomy Database</title>
+    <link rel="stylesheet" type="text/css" href="styling/styles.css">
+</head>
+<body>
+    <h2>Astronomy Database</h2>
+
+    <div class="container">
+        <!-- Stars Section -->
+        <div class="section">
+            <h2>Stars</h2>
+            <form method="POST" action="process.php">
+                Star Name: <input type="text" name="star_name_search" required>
+                <input type="submit" name="search_star" value="Search">
+            </form>
+            <form method="POST" action="show_all.php">
+                <input type="submit" name="show_stars" value="Show All Stars">
+            </form>
+            <form method="POST" action="process.php">
+                <h3>Add Star</h3>
+                <input type="text" name="star_name" placeholder="Star Name" required>
+                <input type="text" name="star_type" placeholder="Star Type" required>
+                <input type="text" name="mass" placeholder="Mass">
+                <input type="text" name="radius" placeholder="Radius">
+                <input type="text" name="temperature" placeholder="Temperature">
+                <input type="text" name="age" placeholder="Age">
+                <input type="text" name="distance" placeholder="Distance">
+                <input type="text" name="constellation_name" placeholder="Constellation Name" required>
+                <input type="text" name="galaxy_name" placeholder="Galaxy Name">
+                <input type="submit" name="add_star" value="Add Star">
+            </form>
+            <form method="POST" action="process.php">
+                <h3>Remove Star</h3>
+                <input type="text" name="star_name" placeholder="Star Name" required>
+                <input type="submit" name="remove_star" value="Remove Star">
+            </form>
+        </div>
+
+        <!-- Constellations Section -->
+	    <div class="section">
+		<h2>Constellations</h2>
+		<form method="POST" action="process.php">
+		    Constellation Name: <input type="text" name="const_name_explore" required>
+		    <input type="submit" name="explore_constellation" value="Explore">
+		</form>
+		<form method="POST" action="show_all.php">
+		    <input type="submit" name="show_constellations" value="Show All Constellations">
+		</form>
+		<form method="POST" action="process.php">
+		    <h3>Add Constellation</h3>
+		    <input type="text" name="const_name" placeholder="Constellation Name" required>
+		    <input type="submit" name="add_constellation" value="Add Constellation">
+		</form>
+		<form method="POST" action="process.php">
+		    <h3>Remove Constellation</h3>
+		    <input type="text" name="const_name" placeholder="Constellation Name" required>
+		    <input type="submit" name="remove_constellation" value="Remove Constellation">
+		</form>
+	    </div>
+        <!-- Exoplanets Section -->
+        <div class="section">
+            <h2>Exoplanets</h2>
+            <form method="POST" action="process.php">
+                Exoplanet Name: <input type="text" name="exo_name_search" required>
+                <input type="submit" name="search_exoplanet" value="Search">
+            </form>
+            <form method="POST" action="show_all.php">
+                <input type="submit" name="show_exoplanets" value="Show All Exoplanets">
+            </form>
+            <form method="POST" action="process.php">
+                <h3>Add Exoplanet</h3>
+                <input type="text" name="exo_name" placeholder="Exoplanet Name" required>
+                <input type="text" name="mass" placeholder="Mass">
+                <input type="text" name="orbital_period" placeholder="Orbital Period">
+                <input type="text" name="host_star_name" placeholder="Host Star Name" required>
+                <input type="text" name="system_name" placeholder="System Name" required>
+                <input type="submit" name="add_exoplanet" value="Add Exoplanet">
+            </form>
+            <form method="POST" action="process.php">
+                <h3>Remove Exoplanet</h3>
+                <input type="text" name="exo_name" placeholder="Exoplanet Name" required>
+                <input type="submit" name="remove_exoplanet" value="Remove Exoplanet">
+            </form>
+	<form method="POST" action="process_update.php">
+		<h3>Update Exoplanet</h3>
+		<input type="text" name="exo_name" placeholder="Exoplanet Name" required>
+		<input type="text" name="mass" placeholder="Mass">
+		<input type="text" name="orbital_period" placeholder="Orbital Period">
+		<input type="text" name="host_star_name" placeholder="Host Star Name" required>
+		<input type="text" name="system_name" placeholder="System Name" required>
+		<input type="submit" name="update_exoplanet" value="Update Exoplanet">
+	    </form>
+	</div>
+
+        <!-- Galaxies Section -->
+        <div class="section">
+            <h2>Galaxies</h2>
+            <form method="POST" action="process.php">
+                Galaxy Name: <input type="text" name="galaxy_name_search" required>
+                <input type="submit" name="search_galaxy" value="Search">
+            </form>
+            <form method="POST" action="show_all.php">
+                <input type="submit" name="show_galaxies" value="Show All Galaxies">
+            </form>
+            <form method="POST" action="process.php">
+                <h3>Add Galaxy</h3>
+                <input type="text" name="galaxy_name" placeholder="Galaxy Name" required>
+                <input type="text" name="constellation_name" placeholder="Constellation Name" required>
+                <input type="text" name="galaxy_type" placeholder="Galaxy Type">
+                <input type="text" name="group_or_cluster" placeholder="Group or Cluster">
+                <input type="submit" name="add_galaxy" value="Add Galaxy">
+            </form>
+            <form method="POST" action="process.php">
+                <h3>Remove Galaxy</h3>
+                <input type="text" name="galaxy_name" placeholder="Galaxy Name" required>
+                <input type="submit" name="remove_galaxy" value="Remove Galaxy">
+            </form>
+        </div>
+	    <!-- Galaxy Clusters Section -->
+	    <div class="section">
+		<h2>Galaxy Clusters</h2>
+		<form method="POST" action="process.php">
+		    Cluster Name: <input type="text" name="cluster_name_search" required>
+		    <input type="submit" name="search_cluster" value="Search">
+		</form>
+		<form method="POST" action="show_all.php">
+		    <input type="submit" name="show_galaxy_clusters" value="Show All Clusters">
+		</form>
+		<form method="POST" action="process.php">
+		    <h3>Add Cluster</h3>
+		    <input type="text" name="cluster_name" placeholder="Cluster Name" required>
+		    <input type="text" name="constellation_name" placeholder="Constellation Name" required>
+		    <input type="submit" name="add_cluster" value="Add Cluster">
+		</form>
+		<form method="POST" action="process.php">
+		    <h3>Remove Cluster</h3>
+		    <input type="text" name="cluster_name" placeholder="Cluster Name" required>
+		    <input type="submit" name="remove_cluster" value="Remove Cluster">
+		</form>
+	    </div>
+
+	    <!-- Multi-planetary Systems Section -->
+	    <div class="section">
+		<h2>Multi-planetary Systems</h2>
+		<form method="POST" action="process.php">
+		    System Name: <input type="text" name="system_name_search" required>
+		    <input type="submit" name="search_system" value="Search">
+		</form>
+		<form method="POST" action="show_all.php">
+		    <input type="submit" name="show_multi_planetary_systems" value="Show All Systems">
+		</form>
+		<form method="POST" action="process.php">
+		    <h3>Add System</h3>
+		    <input type="text" name="name" placeholder="System Name" required>
+		    <input type="text" name="num_of_planets" placeholder="Number of Planets">
+		    <input type="text" name="constellation_name" placeholder="Constellation Name" required>
+		    <input type="text" name="host_star_name" placeholder="Host Star Name" required>
+		    <input type="submit" name="add_system" value="Add System">
+		</form>
+		<form method="POST" action="process.php">
+		    <h3>Remove System</h3>
+		    <input type="text" name="system_name" placeholder="System Name" required>
+		    <input type="submit" name="remove_system" value="Remove System">
+		</form>
+	    </div>
+
+    </div>
+</body>
+</html>
+
